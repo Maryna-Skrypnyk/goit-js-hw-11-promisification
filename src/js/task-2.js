@@ -1,13 +1,13 @@
 import '../sass/main.scss';
 
-export const users = [
+const users = [
   { name: 'Mango', active: true },
   { name: 'Poly', active: false },
   { name: 'Ajax', active: true },
   { name: 'Lux', active: false },
 ];
 
-export const toggleUserState = (allUsers, userName) => {
+const toggleUserState = (allUsers, userName) => {
   return new Promise(resolve => {
     resolve(
       allUsers.map(user =>
@@ -17,7 +17,7 @@ export const toggleUserState = (allUsers, userName) => {
   });
 };
 
-export const logger = updatedUsers => console.table(updatedUsers);
+const logger = updatedUsers => console.table(updatedUsers);
 
 toggleUserState(users, 'Mango').then(logger);
 toggleUserState(users, 'Lux').then(logger);

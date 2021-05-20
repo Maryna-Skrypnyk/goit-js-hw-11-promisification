@@ -1,15 +1,15 @@
 import '../sass/main.scss';
 
-export const delay = ms => {
+const delay = ms => {
   // Мой код
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve = logger(ms);
+      resolve(ms);
     }, ms);
   });
 };
 
-export const logger = time => console.log(`Resolved after ${time}ms`);
+const logger = time => console.log(`Resolved after ${time}ms`);
 
 // Вызовы функции для проверки
 delay(2000).then(logger); // Resolved after 2000ms
