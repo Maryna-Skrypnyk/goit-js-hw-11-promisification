@@ -1,3 +1,5 @@
+import '../sass/main.scss';
+
 export const delay = ms => {
   // Мой код
   return new Promise(resolve => {

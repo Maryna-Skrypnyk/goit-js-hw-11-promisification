@@ -1,3 +1,5 @@
+import '../sass/main.scss';
+
 export const users = [
   { name: 'Mango', active: true },
   { name: 'Poly', active: false },
